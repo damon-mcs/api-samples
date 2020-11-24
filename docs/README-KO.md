@@ -16,9 +16,11 @@
 Sample 을 사용하기 위해서 MCS 거래소에 API_KEY 와 API_SECRET 이 필요합니다. MCS 에 로그인 한 후 [API 발급 페이지](https://mycoinstory.com/account/api) 에서 API 키를 발급해야 합니다.
 각 언어별 Sample 은 아래 버전에서 정상 동작을 확인하였습니다.
 
-- Python >= `3.6.x`
-- Java >= `1.8.x`
-- NodeJS >= `v14.15.1`
+|Language | Version       |
+|---------|:-------------:|
+|Python   | >= `3.6.x`    |
+|Java     | >= `1.8.x`    |
+|NodeJS   | >= `v14.15.1` |
 
 ## 실행
 코드에 `<INPUT_YOUR_API_KEY>` `<INPUT_YOUR_API_SECRET>` 로 된 부분을 위에서 발급받은 본인의 키로 변경한 후 각 언어별 실행 명령어를 입력합니다.

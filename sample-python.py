@@ -87,59 +87,59 @@ class MCS:
     #  public                                                                                    #
     ##############################################################################################
     def get_orderbook(self, params):  # Orderbook
-        return exchange.get(end_point='/orderbook', is_sign_request=False, params=params)
+        return self.get(end_point='/orderbook', is_sign_request=False, params=params)
 
     def get_contract(self, params):  # Instruments
-        return exchange.get(end_point='/contract', is_sign_request=False, params=params)
+        return self.get(end_point='/contract', is_sign_request=False, params=params)
 
     def get_tickers(self, params):  # Tickers
-        return exchange.get(end_point='/tickers', is_sign_request=False, params=params)
+        return self.get(end_point='/tickers', is_sign_request=False, params=params)
 
     def get_klines(self, params):  # Kline/Candlestick Data
-        return exchange.get(end_point='/klines', is_sign_request=False, params=params)
+        return self.get(end_point='/klines', is_sign_request=False, params=params)
 
     def get_trades(self, params):  # Trades
-        return exchange.get(end_point='/trades', is_sign_request=False, params=params)
+        return self.get(end_point='/trades', is_sign_request=False, params=params)
 
     def get_funding_rates(self, params):  # Funding Rate History
-        return exchange.get(end_point='/funding/history', is_sign_request=False, params=params)
+        return self.get(end_point='/funding/history', is_sign_request=False, params=params)
 
     ##############################################################################################
     #  private                                                                                   #
     ##############################################################################################
 
     def get_wallet_balances(self, params):  # Get Wallet Balance
-        return exchange.get(end_point='/wallet/balances', is_sign_request=True, params=params)
+        return self.get(end_point='/wallet/balances', is_sign_request=True, params=params)
 
     def get_wallet_incomes(self, params):  # Get Income History
-        return exchange.get(end_point='/wallet/incomes', is_sign_request=True, params=params)
+        return self.get(end_point='/wallet/incomes', is_sign_request=True, params=params)
 
     def get_position(self, params):  # Get Position Information
-        return exchange.get(end_point='/position', is_sign_request=True, params=params)
+        return self.get(end_point='/position', is_sign_request=True, params=params)
 
     def set_leverage(self, params):  # Change Leverage
-        return exchange.put(end_point='/position/leverage', is_sign_request=True, params=params)
+        return self.put(end_point='/position/leverage', is_sign_request=True, params=params)
 
     def get_tradeFee(self, params):  # Get Trade Fee
-        return exchange.get(end_point='/tradeFee', is_sign_request=True, params=params)
+        return self.get(end_point='/tradeFee', is_sign_request=True, params=params)
 
     def get_order_fills(self, params):  # Query Order Status
-        return exchange.get(end_point='/order/fills', is_sign_request=True, params=params)
+        return self.get(end_point='/order/fills', is_sign_request=True, params=params)
 
     def get_order(self, params):  # Query Order Status
-        return exchange.get(end_point='/order', is_sign_request=True, params=params)
+        return self.get(end_point='/order', is_sign_request=True, params=params)
 
     def get_order_all(self, params):  # Get All Open Orders
-        return exchange.get(end_point='/order/all', is_sign_request=True, params=params)
+        return self.get(end_point='/order/all', is_sign_request=True, params=params)
 
     def place_order(self, params):  # Place Order
-        return exchange.post(end_point='/order', is_sign_request=True, params=params)
+        return self.post(end_point='/order', is_sign_request=True, params=params)
 
     def cancel_order(self, params):  # Cancel Order
-        return exchange.delete(end_point='/order', is_sign_request=True, params=params)
+        return self.delete(end_point='/order', is_sign_request=True, params=params)
 
     def cancel_order_all(self, params):  # Cancel All Open Orders
-        return exchange.delete(end_point='/order/all', is_sign_request=True, params=params)
+        return self.delete(end_point='/order/all', is_sign_request=True, params=params)
 
 
 if __name__ == '__main__':
